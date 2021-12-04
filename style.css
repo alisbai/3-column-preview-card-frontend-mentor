@@ -1,0 +1,151 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    /* Primary colors */
+    --brightOrange: hsl(31, 77%, 52%);
+    --darkCyan: hsl(184, 100%, 22%);
+    --veryDarkCyan: hsl(179, 100%, 13%);
+    /* Neutral colors */
+    --transparentWhite: hsla(0, 0%, 100%, 0.75);
+    --veryLightGray: hsl(0, 0%, 95%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Lexend Deca', arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--veryLightGray);
+    background-color: var(--transparentWhite);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+    display: none;
+}
+
+
+main {
+    padding: 2rem 0.8rem;
+}
+
+
+.gridThreeColumns {
+    margin: auto;
+    width: 80%;
+    max-width: 1000px;
+    /* fallback color */
+    background-color: red;
+    display: grid;
+    grid-auto-flow: column;
+    border: none;
+    border-radius: 0.7rem;
+    overflow: hidden;
+}
+
+@media all and (max-width: 700px) {
+    .gridThreeColumns {
+        grid-auto-flow: row;
+    }
+}
+
+
+.card1 {
+    background-color: var(--brightOrange);
+    
+}
+
+.card1>button {
+    color: var(--brightOrange);
+}
+
+.card2 {
+    background-color: var(--darkCyan);
+}
+.card2>button {
+    color: var(--darkCyan);
+}
+
+.card3 {
+    background-color: var(--veryDarkCyan);
+}
+
+.card3>button {
+    color: var(--veryDarkCyan);
+}
+
+.card1::before {
+    content: url(images/icon-sedans.svg);
+}
+
+.card2::before {
+    content: url(images/icon-suvs.svg);
+}
+
+.card3::before {
+    content: url(images/icon-luxury.svg);
+}
+.cards {
+    position: relative;
+    padding: 3rem 2.5rem;
+}
+
+.cards::before {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+}
+
+h2 {
+    font-family: 'Big Shoulders Display';
+    margin-top: 3rem;
+    font-size: 1.7rem
+}
+
+p {
+    margin-top: 2rem;
+    color: var(--transparentWhite);
+    font-size: 0.8rem;
+    line-height: 1.8;
+}
+
+.cta-buttons {
+    color: transparent;
+    margin-top: 3rem;
+    background-color: var(--veryLightGray);
+    padding: 0.7rem 1.8rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.cta-buttons:hover {
+    background-color: transparent;
+    color: var(--veryLightGray);
+    box-shadow: inset 0 0 0 2px var(--veryLightGray);
+}
+
+
+
+
